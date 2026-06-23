@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>J. Manjunath | Python Full Stack Developer</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">J. MANJUNATH</div>
+
+        <div class="nav-links">
+            <a href="#">Featured</a>
+            <a href="#">Django</a>
+            <a href="#">Projects</a>
+            <a href="#">Experience</a>
+            <a href="#">Resume</a>
+        </div>
+
+        <div class="nav-actions">
+            <span>Search</span>
+            <a href="#contact">Hire Me</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="tag">PYTHON FULL STACK DEVELOPER</p>
+            <h1>Building scalable digital products with Django.</h1>
+            <p>
+                I create clean, practical, and business-focused web applications
+                using Python, Django, MySQL, JavaScript, and modern frontend design.
+            </p>
+            <a href="#projects" class="btn">Explore Work</a>
+        </div>
+    </section>
+    <section id="projects" class="featured-section">
+        <div class="section-header">
+            <p>FEATURED WORK</p>
+            <h2>Case Studies</h2>
+        </div>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-img">FITCORE</div>
+                <div class="project-info">
+                    <h3>FitCore</h3>
+                    <p>Django gym management platform with owner and user dashboards.</p>
+                    <span>Python · Django · MySQL</span>
+                    <a href="#">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">STUDENTCONNECT</div>
+                <div class="project-info">
+                    <h3>StudentConnect</h3>
+                    <p>Student resource sharing platform for notes and textbooks.</p>
+                    <span>MERN · REST API · MongoDB</span>
+                    <a href="#">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">TEXTSTORE</div>
+                <div class="project-info">
+                    <h3>TextStore</h3>
+                    <p>Django + MySQL app for storing and managing text data.</p>
+                    <span>Django · MySQL · CRUD</span>
+                    <a href="#">View Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
