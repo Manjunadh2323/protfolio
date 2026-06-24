@@ -4,7 +4,7 @@
 
 <head>
     <title>J. Manjunath | Python Full Stack Developer</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=12">
 </head>
 
 <body>
@@ -13,16 +13,91 @@
         <div class="logo">J. MANJUNATH</div>
 
         <div class="nav-links">
-            <a href="#">Featured</a>
-            <a href="#">Django</a>
-            <a href="#">Projects</a>
-            <a href="#">Experience</a>
-            <a href="#">Resume</a>
+            <a href="#projects">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
         </div>
 
         <div class="nav-actions">
-            <span>Search</span>
-            <a href="#contact">Hire Me</a>
+            <span>Available</span>
+            <a href="#contact">Let's Talk</a>
+        </div>
+        <div class="profile-menu">
+            <button class="profile-icon" onclick="toggleProfile()">
+                👤
+            </button>
+
+            <div class="profile-dropdown" id="profileDropdown">
+
+                <div class="profile-head pro-head-new">
+
+                    <div class="profile-photo-wrap">
+                        <img src="{% static 'images/profile.jpg' %}" alt="Profile">
+                    </div>
+
+                    <div class="profile-info">
+                        <h3>J. Manjunath</h3>
+                        <p>Python Full Stack Developer</p>
+                        <small>📍 Chittoor, India</small>
+                    </div>
+
+                </div>
+                <div class="profile-stats">
+
+                    <div>
+                        <strong>4+</strong>
+                        <span>Projects</span>
+                    </div>
+
+                    <div>
+                        <strong>10+</strong>
+                        <span>Skills</span>
+                    </div>
+
+                    <div>
+                        <strong>3</strong>
+                        <span>Certificates</span>
+                    </div>
+
+                    <div>
+                        <strong>1</strong>
+                        <span>Internship</span>
+                    </div>
+
+                </div>
+
+                <a href="#">
+                    <span>📄 Resume</span>
+                    <small>Download</small>
+                </a>
+
+                <a href="#">
+                    <span>🏆 Certifications</span>
+                    <small>3 Certificates</small>
+                </a>
+
+                <a href="#">
+                    <span>🛠 Skills</span>
+                    <small>10+ Skills</small>
+                </a>
+
+                <a href="#projects">
+                    <span>📂 Projects</span>
+                    <small>4 Projects</small>
+                </a>
+
+                <a href="https://github.com/Manjunadh2323" target="_blank">
+                    <span>💻 GitHub</span>
+                    <small>Open</small>
+                </a>
+
+                <a href="#">
+                    <span>🔗 LinkedIn</span>
+                    <small>Connect</small>
+                </a>
+
+            </div>
         </div>
     </nav>
 
@@ -36,6 +111,46 @@
             </p>
             <a href="#projects" class="btn">Explore Work</a>
         </div>
+    </section>
+    <section class="about-section" id="about">
+
+        <div class="about-left">
+            <p class="tag">ABOUT ME</p>
+            <h2>Building products that solve real problems.</h2>
+        </div>
+
+        <div class="about-right">
+            <p>
+                I'm J. Manjunath, a B.Tech CSE student and Python Full Stack Developer.
+                I enjoy building scalable web applications using Django, React,
+                MySQL, and modern frontend technologies.
+            </p>
+
+            <div class="about-info">
+                <div>🎓 B.Tech CSE · SVCET</div>
+                <div>📍 Chittoor, India</div>
+                <div>💼 Open to Internships</div>
+                <div>🚀 Python Full Stack Developer</div>
+            </div>
+        </div>
+
+    </section>
+    <section class="stack-section">
+
+        <p class="tag">TECH STACK</p>
+        <h2>Technologies I work with</h2>
+
+        <div class="stack-grid">
+            <div class="stack-card">Python</div>
+            <div class="stack-card">Django</div>
+            <div class="stack-card">React</div>
+            <div class="stack-card">JavaScript</div>
+            <div class="stack-card">MySQL</div>
+            <div class="stack-card">MongoDB</div>
+            <div class="stack-card">Git & GitHub</div>
+            <div class="stack-card">REST APIs</div>
+        </div>
+
     </section>
     <section id="projects" class="featured-section">
         <div class="section-header">
@@ -75,7 +190,107 @@
             </div>
         </div>
     </section>
+    <section class="dev-dashboard" id="skills">
+        <div class="dev-head">
+            <span>DEVELOPER DASHBOARD</span>
+            <h2>Designed like a product. Built like an engineer.</h2>
+            <p>
+                A clean overview of my skills, projects, experience, and development journey.
+            </p>
+        </div>
 
+        <div class="dev-grid">
+            <div class="dev-card dev-profile">
+                <h3>J. Manjunath</h3>
+                <p>Python Full Stack Developer</p>
+                <small>B.Tech CSE · SVCET</small>
+            </div>
+
+            <div class="dev-card">
+                <h3>04+</h3>
+                <p>Projects Built</p>
+            </div>
+
+            <div class="dev-card">
+                <h3>01</h3>
+                <p>Internship</p>
+            </div>
+
+            <div class="dev-card">
+                <h3>10+</h3>
+                <p>Tech Skills</p>
+            </div>
+        </div>
+    </section>
+    <section class="experience-section" id="experience">
+        <p class="tag">EXPERIENCE</p>
+        <h2>My development journey</h2>
+
+        <div class="timeline">
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>MERN Stack Developer Intern</h3>
+                <p>Doneswari Technologies LLP</p>
+            </div>
+
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>FitCore</h3>
+                <p>Django gym management platform.</p>
+            </div>
+
+            <div class="timeline-card">
+                <span>2026</span>
+                <h3>StudentConnect</h3>
+                <p>Student notes and resources sharing platform.</p>
+            </div>
+        </div>
+    </section>
+<section class="resume-section" id="resume">
+    <h2>Resume</h2>
+    <p>Download or view my resume to explore my skills, projects, and experience.</p>
+
+    <div class="resume-buttons">
+
+        <a href="{% static 'files/resume.pdf' %}"
+           class="btn"
+           download>
+            Download Resume
+        </a>
+
+        <a href="{% static 'files/resume.pdf' %}"
+           class="btn btn-outline"
+           target="_blank">
+            View Resume
+        </a>
+
+    </div>
+</section>
+
+   <section class="contact-section" id="contact">
+    <h2>Let's Build Something Great Together</h2>
+
+    <p>
+        I'm open to full-time opportunities, internships, and freelance projects.
+        If you have an idea, a project, or a role that matches my skills, I'd love to hear from you.
+    </p>
+
+    <form>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Company / Project (Optional)">
+        <textarea placeholder="Tell me about your project or opportunity..."></textarea>
+
+        <button type="submit">Let's Connect</button>
+    </form>
+</section>
+    <script>
+        function toggleProfile() {
+            document
+                .getElementById("profileDropdown")
+                .classList.toggle("show-profile");
+        }
+    </script>
 </body>
 
 </html>
