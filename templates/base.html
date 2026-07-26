@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>J. Manjunath | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+
+    <!-- Hero -->
+    <link rel="stylesheet" href="{% static 'css/hero.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    {% include "components/navbar.html" %}
+
+    {% include "components/loader.html" %}
+
+    {% block content %}
+    {% endblock %}
+
+<!-- JavaScript -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="{% static 'javascript/loader.js' %}"></script>
+<script src="{% static 'javascript/navigation.js' %}"></script>
+<script src="{% static 'javascript/animations.js' %}"></script>
+<script src="{% static 'javascript/cursor.js' %}"></script>
+<script src="{% static 'javascript/scroll.js' %}"></script>
+
+<!-- Hero -->
+<script src="{% static 'javascript/hero.js' %}"></script>
+
+<!-- General Scripts -->
+<script src="{% static 'js/main.js' %}"></script>
+
+
+<!-- Three.js Scene -->
+<script src="{% static 'javascript/three-scene.js' %}"></script>
+
+</body>
+
+</html>

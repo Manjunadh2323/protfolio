@@ -1,0 +1,43 @@
+:root {
+
+    /* ==============================
+          PREMIUM DARK THEME
+    ============================== */
+
+
+    --bg-primary: #0A0A0A;
+
+    --bg-secondary: #111111;
+
+
+    /* Text */
+
+    --text-primary: #F5F5F5;
+
+    --text-secondary: #8A8A8A;
+
+
+    /* Borders */
+
+    --border-color: rgba(255,255,255,0.08);
+
+
+    /* Glass */
+
+    --glass-bg: rgba(255,255,255,0.04);
+
+    --glass-border: rgba(255,255,255,0.10);
+
+
+    /* Accent */
+
+    --accent: #FFFFFF;
+
+
+    /* Animation */
+
+    --transition-fast: .3s ease;
+
+    --transition-smooth: .8s cubic-bezier(.16,1,.3,1);
+
+}

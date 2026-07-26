@@ -1,0 +1,22 @@
+<svg class="jm-logo" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Outer diamond symbol -->
+
+    <path d="M60 8L108 60L60 112L12 60L60 8Z" stroke="currentColor" stroke-width="4"></path>
+
+
+    <!-- J -->
+
+    <path d="M42 35V72C42 84 34 90 26 84" stroke="currentColor" stroke-width="7" stroke-linecap="round"></path>
+
+
+    <!-- M -->
+
+    <path d="M58 82V35L76 62L94 35V82" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+
+
+    <!-- Center point -->
+
+    <circle cx="60" cy="60" r="5" fill="currentColor"></circle>
+
+</svg>

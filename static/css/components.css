@@ -1,0 +1,357 @@
+/* ==========================================
+                PREMIUM LOADER
+========================================== */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#09090b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:opacity .9s ease,visibility .9s ease;
+}
+
+#loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+}
+
+.loader-logo{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    letter-spacing:10px;
+
+    animation:logoReveal 1.3s ease;
+}
+
+.loader-line{
+
+    width:180px;
+
+    height:2px;
+
+    background:rgba(255,255,255,.12);
+
+    overflow:hidden;
+
+    border-radius:10px;
+}
+
+.loader-line span{
+
+    display:block;
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #4f46e5,
+        #60a5fa,
+        #38bdf8
+    );
+
+    animation:loading 2s ease forwards;
+}
+
+@keyframes loading{
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes logoReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+        PREMIUM GLASS NAVBAR
+========================================== */
+
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    padding:25px 0;
+
+    transition:
+        padding .3s ease,
+        background .3s ease,
+        backdrop-filter .3s ease;
+
+}
+
+
+
+.navbar.scrolled{
+
+    padding:15px 0;
+
+    background:rgba(10,10,15,0.75);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+}
+
+
+
+.nav-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+
+/* Logo */
+
+.nav-logo{
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    color:white;
+
+    text-decoration:none;
+
+    letter-spacing:-1px;
+
+    transition:.3s ease;
+
+}
+
+
+
+.nav-logo:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.8;
+
+}
+
+
+
+/* Navigation Links */
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+
+
+.nav-links a{
+
+    position:relative;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    transition:.3s ease;
+
+}
+
+
+
+.nav-links a:hover{
+
+    color:white;
+
+}
+
+
+
+/* Animated underline */
+
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#38bdf8;
+
+    transition:.3s ease;
+
+}
+
+
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+/* Mobile Button */
+
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+
+.menu-toggle span{
+
+    display:block;
+
+    width:25px;
+
+    height:2px;
+
+    margin:6px;
+
+    background:white;
+
+    transition:.3s ease;
+
+}
+.brand-logo{
+
+    width:48px;
+    height:48px;
+
+    display:block;
+
+    transition:
+    transform .5s ease,
+    filter .5s ease;
+
+}
+
+
+.brand-logo:hover{
+
+    transform:
+    scale(1.08)
+    rotate(5deg);
+
+    filter:
+    drop-shadow(0 0 15px rgba(255,255,255,.35));
+
+}
+/* ==========================================
+        JM BRAND LOGO
+========================================== */
+
+
+.brand-logo{
+
+    width:48px;
+
+    height:48px;
+
+    color:#F5F5F5;
+
+    display:block;
+
+    transition:
+    transform .5s ease,
+    filter .5s ease;
+
+}
+
+
+
+.brand-logo:hover{
+
+    transform:
+    scale(1.08)
+    rotate(5deg);
+
+    filter:
+    drop-shadow(
+        0 0 15px rgba(255,255,255,0.35)
+    );
+
+}
