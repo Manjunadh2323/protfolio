@@ -1,0 +1,934 @@
+/* =========================================
+   ABOUT — CINEMATIC EDITORIAL SECTION
+   Centered reference-matched composition
+========================================= */
+
+.about {
+    position: relative;
+
+    width: 100%;
+    height: 120vh;
+
+    background: #050505;
+
+    color: #f3f4f4;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   STAGE
+========================================= */
+
+.about-stage {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   REFERENCE AREA
+========================================= */
+
+.about-reference {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* subtle light */
+.about-reference::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(255,255,255,.025) 0%,
+            transparent 62%
+        );
+}
+
+
+/* =========================================
+   BACKGROUND TYPOGRAPHY
+========================================= */
+
+.about-bg {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+.about-bg-word {
+    position: absolute;
+
+    left: 50%;
+
+    width: max-content;
+
+    white-space: nowrap;
+
+    font-size: clamp(
+        120px,
+        16vw,
+        250px
+    );
+
+    line-height: .75;
+
+    font-weight: 700;
+
+    letter-spacing: -.075em;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.018);
+
+    will-change: transform, opacity;
+}
+
+
+.about-bg-word-one {
+    top: 24%;
+
+    transform: translateX(-50%);
+}
+
+
+.about-bg-word-two {
+    top: 66%;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================
+   ABOUT LABEL
+========================================= */
+
+.about-section-label {
+    position: absolute;
+
+    top: 10vh;
+    left: 3.5vw;
+
+    z-index: 8;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: .25em;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.48);
+
+    opacity: 0;
+
+    will-change: transform, opacity;
+}
+
+
+/* =========================================
+   MAIN COMPOSITION
+   IMAGE + TEXT ARE ONE UNIT
+========================================= */
+
+.about-composition {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: 5;
+
+    /*
+       Exact relationship between image
+       and text is controlled here.
+    */
+
+    width: min(
+        1240px,
+        calc(100vw - 100px)
+    );
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 495px)
+        minmax(0, 680px);
+
+    column-gap: 70px;
+
+    align-items: center;
+
+    transform:
+        translate(-50%, calc(-50% + 3cm));
+
+    will-change: transform;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.about-visual {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 495 / 578;
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+.about-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    filter:
+        brightness(.91)
+        contrast(1.035);
+
+    will-change: transform;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.about-info {
+    position: relative;
+
+    width: 100%;
+
+    text-align: left;
+
+    opacity: 1;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+.about-intro {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   REVEAL MASK
+========================================= */
+
+.about-reveal-mask {
+    display: block;
+
+    overflow: hidden;
+
+    padding-bottom: .08em;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.about-intro-main {
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    /*
+       Large editorial typography
+    */
+
+    font-size: clamp(
+        54px,
+        5.25vw,
+        86px
+    );
+
+    line-height: .91;
+
+    font-weight: 800;
+
+    letter-spacing: -.065em;
+
+    text-transform: uppercase;
+
+    color: #f3f4f4;
+
+    text-align: left;
+
+    will-change: transform;
+}
+
+
+.about-intro-main span {
+    display: block;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-description-mask {
+    margin-top: 28px;
+}
+
+
+.about-intro-description {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: clamp(
+        13px,
+        .95vw,
+        16px
+    );
+
+    line-height: 1.52;
+
+    font-weight: 400;
+
+    letter-spacing: -.012em;
+
+    color:
+        rgba(
+            243,
+            244,
+            244,
+            .78
+        );
+
+    text-align: left;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =========================================
+   KNOW MORE
+========================================= */
+
+.about-more {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .76
+        );
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: .23em;
+
+    opacity: 0;
+
+    will-change:
+        transform,
+        opacity;
+
+    transition:
+        color .35s ease,
+        gap .45s
+        cubic-bezier(
+            .22,
+            1,
+            .36,
+            1
+        );
+}
+
+
+.about-more-dot {
+    font-size: 17px;
+
+    line-height: 0;
+
+    letter-spacing: 0;
+}
+
+
+.about-more:hover {
+    color: #fff;
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   KNOW MORE / WELCOME SCREEN
+========================================= */
+
+.about-welcome {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 30;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #050505;
+
+    color: #f3f4f4;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity .75s ease,
+        transform .85s
+        cubic-bezier(
+            .22,
+            1,
+            .36,
+            1
+        ),
+        visibility 0s
+        linear .85s;
+}
+
+
+.about-welcome::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(255,255,255,.035) 0%,
+            transparent 62%
+        );
+}
+
+
+.about-welcome.is-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+
+    transition-delay: 0s;
+}
+
+
+.about-welcome-inner {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        900px,
+        86vw
+    );
+
+    text-align: center;
+}
+
+
+.about-welcome-label {
+    margin-bottom: 22px;
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: .28em;
+
+    text-transform: uppercase;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .48
+        );
+}
+
+
+.about-welcome-title {
+    margin: 0;
+
+    font-size: clamp(
+        56px,
+        9vw,
+        150px
+    );
+
+    line-height: .9;
+
+    font-weight: 800;
+
+    letter-spacing: -.06em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (max-width: 1250px) {
+
+    .about-composition {
+
+        width:
+            calc(
+                100vw - 70px
+            );
+
+        grid-template-columns:
+            minmax(0, 43%)
+            minmax(0, 57%);
+
+        column-gap: 55px;
+    }
+
+    .about-intro-main {
+        font-size:
+            clamp(
+                50px,
+                5.1vw,
+                78px
+            );
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about {
+        height: 125vh;
+
+        min-height: 900px;
+    }
+
+    .about-stage {
+        height: 100vh;
+
+        min-height: 900px;
+    }
+
+
+    .about-composition {
+
+        top: 50%;
+
+        width:
+            min(
+                700px,
+                calc(
+                    100vw - 50px
+                )
+            );
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 45px;
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            );
+    }
+
+
+    .about-visual {
+
+        width:
+            min(
+                58vw,
+                480px
+            );
+
+        aspect-ratio:
+            495 / 578;
+    }
+
+
+    .about-info {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .about-intro-main {
+
+        align-items: center;
+
+        font-size:
+            clamp(
+                42px,
+                7vw,
+                64px
+            );
+
+        text-align: center;
+    }
+
+
+    .about-intro-description {
+
+        max-width: 650px;
+
+        margin:
+            0 auto;
+
+        text-align: center;
+    }
+
+
+    .about-more {
+
+        justify-content:
+            center;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .about {
+
+        height: 120vh;
+
+        min-height: 820px;
+    }
+
+
+    .about-stage {
+
+        height: 100vh;
+
+        min-height: 820px;
+    }
+
+
+    .about-section-label {
+
+        top: 7vh;
+
+        left: 20px;
+
+        font-size: 7px;
+    }
+
+
+    .about-composition {
+
+        width:
+            calc(
+                100vw - 32px
+            );
+
+        gap: 30px;
+    }
+
+
+    .about-visual {
+
+        width: 78vw;
+
+        max-width: 360px;
+    }
+
+
+    .about-intro-main {
+
+        font-size:
+            clamp(
+                34px,
+                9vw,
+                48px
+            );
+
+        line-height: .95;
+    }
+
+
+    .about-description-mask {
+
+        margin-top: 18px;
+    }
+
+
+    .about-intro-description {
+
+        font-size: 11px;
+
+        line-height: 1.52;
+    }
+
+
+    .about-more {
+
+        margin-top: 20px;
+
+        font-size: 7px;
+    }
+
+
+    .about-bg-word {
+
+        font-size: 19vw;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about {
+
+        height: auto;
+
+        min-height: 100vh;
+    }
+
+
+    .about-stage {
+
+        position: relative;
+
+        height: auto;
+
+        min-height: 100vh;
+    }
+
+
+    .about-bg {
+
+        display: none;
+    }
+
+
+    .about-composition {
+
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width:
+            min(
+                86vw,
+                700px
+            );
+
+        margin:
+            15vh auto 0;
+
+        transform: none !important;
+    }
+
+
+    .about-visual,
+    .about-info {
+
+        opacity: 1 !important;
+
+        transform: none !important;
+    }
+
+
+    .about-info {
+
+        text-align: center;
+    }
+
+
+    .about-intro-main {
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .about-intro-description {
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+
+    .about-more {
+
+        opacity: 1 !important;
+    }
+}
+/* =========================================================
+   KNOW MORE — CENTERED POSITION
+========================================================= */
+
+.about-more {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.about-more:hover {
+    opacity: 0.65;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.about-more-dot {
+    font-size: 14px;
+
+    line-height: 1;
+}

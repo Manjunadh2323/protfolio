@@ -1,0 +1,1627 @@
+/* =========================================================
+   PROJECTS SECTION
+========================================================= */
+
+.projects-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        90px
+        0
+        110px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.projects-header {
+
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+
+    margin:
+        0
+        auto
+        30px;
+
+    padding-bottom:
+        18px;
+
+    border-bottom:
+        2px
+        dotted
+        #111111;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+}
+
+
+.projects-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+}
+
+
+.projects-eyebrow {
+
+    font-size:
+        15px;
+
+    letter-spacing:
+        .08em;
+
+    color:
+        #222222;
+}
+
+
+.projects-count {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        36px;
+
+    height:
+        29px;
+
+    padding:
+        0
+        8px;
+
+    border:
+        1px
+        dotted
+        #111111;
+
+    border-radius:
+        5px;
+
+    font-size:
+        11px;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.projects-filter {
+
+    display:
+        flex;
+
+    gap:
+        8px;
+}
+
+
+.project-filter {
+
+    height:
+        34px;
+
+    padding:
+        0
+        17px;
+
+    border:
+        1px
+        solid
+        #111111;
+
+    border-radius:
+        9px;
+
+    background:
+        #ffffff;
+
+    color:
+        #111111;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .05em;
+
+    cursor:
+        pointer;
+
+    transition:
+        .25s ease;
+}
+
+
+.project-filter:hover {
+
+    background:
+        #f3f3f3;
+}
+
+
+.project-filter.active {
+
+    background:
+        #000000;
+
+    color:
+        #ffffff;
+
+    border-color:
+        #000000;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.projects-grid {
+
+    width:
+        min(
+            1200px,
+            calc(100% - 60px)
+        );
+
+    margin:
+        0
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap:
+        22px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.project-card {
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+
+.project-card:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+
+.project-card-inner {
+
+    border:
+        2px
+        dotted
+        #111111;
+
+    border-radius:
+        15px;
+
+    padding:
+        10px;
+
+    background:
+        #ffffff;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.project-image-wrap {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    overflow:
+        hidden;
+
+    border:
+        1px
+        solid
+        #cfcfcf;
+
+    border-radius:
+        10px;
+
+    background:
+        #f1f1f1;
+}
+
+
+.project-image {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform .5s ease;
+}
+
+
+.project-card:hover
+.project-image {
+
+    transform:
+        scale(1.025);
+}
+
+
+/* =========================================================
+   FEATURED BADGE
+========================================================= */
+
+.project-featured {
+
+    position:
+        absolute;
+
+    top:
+        10px;
+
+    left:
+        10px;
+
+    z-index:
+        2;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    height:
+        27px;
+
+    padding:
+        0
+        11px;
+
+    border-radius:
+        20px;
+
+    background:
+        #000000;
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .03em;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.project-card-content {
+
+    padding:
+        17px
+        5px
+        7px;
+}
+
+
+.project-card-title-row {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+}
+
+
+.project-card-title-row h3 {
+
+    margin:
+        0;
+
+    color:
+        #111111;
+
+    font-family:
+        "Arial Narrow",
+        Arial,
+        sans-serif;
+
+    font-size:
+        20px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.05;
+}
+
+
+.project-card-title-row p {
+
+    margin:
+        6px
+        0
+        0;
+
+    color:
+        #777777;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .05em;
+}
+
+
+.project-open {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    flex:
+        0
+        0
+        30px;
+
+    border:
+        1px
+        solid
+        #111111;
+
+    border-radius:
+        50%;
+
+    font-size:
+        14px;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+
+.project-card:hover
+.project-open {
+
+    background:
+        #000000;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.project-short-description {
+
+    margin:
+        13px
+        0
+        13px;
+
+    max-width:
+        90%;
+
+    color:
+        #555555;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   CARD TECHNOLOGIES
+========================================================= */
+
+.project-meta {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+}
+
+
+.project-meta span {
+
+    padding:
+        5px
+        8px;
+
+    border:
+        1px
+        solid
+        #d8d8d8;
+
+    border-radius:
+        4px;
+
+    color:
+        #333333;
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================================
+   PROJECT MODAL
+========================================================= */
+
+.project-modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        9999;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        30px;
+
+    visibility:
+        hidden;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+
+.project-modal.open {
+
+    visibility:
+        visible;
+
+    opacity:
+        1;
+
+    pointer-events:
+        auto;
+}
+
+
+/* =========================================================
+   BACKDROP
+========================================================= */
+
+.project-modal-backdrop {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            .58
+        );
+
+    backdrop-filter:
+        blur(
+            16px
+        );
+
+    -webkit-backdrop-filter:
+        blur(
+            16px
+        );
+}
+
+
+/* =========================================================
+   MODAL WINDOW
+========================================================= */
+
+.project-modal-window {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        min(
+            820px,
+            92vw
+        );
+
+    max-height:
+        88vh;
+
+    padding:
+        22px
+        28px
+        30px;
+
+    box-sizing:
+        border-box;
+
+    overflow-y:
+        auto;
+
+    overflow-x:
+        hidden;
+
+    background:
+        #ffffff;
+
+    border:
+        3px
+        dotted
+        #111111;
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        0
+        35px
+        100px
+        rgba(
+            0,
+            0,
+            0,
+            .38
+        );
+
+    transform:
+        scale(.92)
+        translateY(25px);
+
+    opacity:
+        0;
+
+    transition:
+        transform .45s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        ),
+        opacity .35s ease;
+}
+
+
+.project-modal.open
+.project-modal-window {
+
+    transform:
+        scale(1)
+        translateY(0);
+
+    opacity:
+        1;
+}
+
+
+/* =========================================================
+   MODAL TOP
+========================================================= */
+
+.project-modal-top {
+
+    padding:
+        4px
+        8px
+        18px;
+
+    border-bottom:
+        1px
+        dotted
+        #222222;
+}
+
+
+/* =========================================================
+   PERIOD + CATEGORY
+========================================================= */
+
+.project-modal-meta {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-bottom:
+        10px;
+
+    color:
+        #555555;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .08em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* =========================================================
+   MODAL TITLE
+========================================================= */
+
+.project-modal-title-row {
+
+    display:
+        block;
+}
+
+
+.project-modal-title-row h2 {
+
+    margin:
+        0;
+
+    max-width:
+        760px;
+
+    color:
+        #111111;
+
+    font-family:
+        "Arial Narrow",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            52px
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        .98;
+
+    letter-spacing:
+        -.02em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.project-modal-title-row p {
+
+    margin:
+        8px
+        0
+        0;
+
+    color:
+        #666666;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .08em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.project-modal-close {
+
+    position:
+        absolute;
+
+    top:
+        17px;
+
+    right:
+        17px;
+
+    z-index:
+        20;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border:
+        1px
+        dotted
+        #111111;
+
+    border-radius:
+        50%;
+
+    background:
+        #ffffff;
+
+    color:
+        #111111;
+
+    font-size:
+        20px;
+
+    line-height:
+        1;
+
+    cursor:
+        pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+
+.project-modal-close:hover {
+
+    background:
+        #000000;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   MODAL IMAGE
+========================================================= */
+
+.project-modal-image-wrap {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        350px;
+
+    margin-top:
+        24px;
+
+    padding:
+        10px;
+
+    box-sizing:
+        border-box;
+
+    overflow:
+        hidden;
+
+    border:
+        2px
+        dotted
+        #111111;
+
+    border-radius:
+        12px;
+
+    background:
+        #f7f7f7;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.project-modal-image-wrap img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+    object-position:
+        center;
+
+    border-radius:
+        5px;
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
+
+.project-modal-content {
+
+    padding:
+        0
+        8px;
+}
+
+
+.project-modal-section {
+
+    margin-top:
+        28px;
+
+    padding-top:
+        18px;
+
+    border-top:
+        1px
+        dotted
+        #999999;
+}
+
+
+.project-modal-section h4 {
+
+    margin:
+        0
+        0
+        12px;
+
+    color:
+        #555555;
+
+    font-size:
+        10px;
+
+    font-weight:
+        400;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.project-modal-section p {
+
+    margin:
+        0;
+
+    max-width:
+        760px;
+
+    color:
+        #222222;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   KEY FEATURES
+========================================================= */
+
+.project-modal-features {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+
+    margin:
+        0;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+.project-modal-features li {
+
+    position:
+        relative;
+
+    padding-left:
+        27px;
+
+    color:
+        #222222;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+}
+
+
+.project-modal-features li::before {
+
+    content:
+        "✓";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        1px;
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px
+        solid
+        #111111;
+
+    border-radius:
+        50%;
+
+    color:
+        #111111;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.project-modal-tech {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+}
+
+
+.project-modal-tech span {
+
+    padding:
+        7px
+        10px;
+
+    border:
+        1px
+        solid
+        #cfcfcf;
+
+    border-radius:
+        4px;
+
+    background:
+        #ffffff;
+
+    color:
+        #222222;
+
+    font-size:
+        10px;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.project-modal-actions {
+
+    display:
+        flex;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+}
+
+
+.project-modal-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        38px;
+
+    padding:
+        0
+        17px;
+
+    border:
+        1px
+        solid
+        #111111;
+
+    border-radius:
+        6px;
+
+    background:
+        #ffffff;
+
+    color:
+        #111111;
+
+    text-decoration:
+        none;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .04em;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+
+.project-modal-button:hover {
+
+    background:
+        #000000;
+
+    color:
+        #ffffff;
+}
+
+
+.project-modal-button-dark {
+
+    background:
+        #000000;
+
+    color:
+        #ffffff;
+}
+
+
+.project-modal-button-dark:hover {
+
+    background:
+        #222222;
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .projects-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .projects-section {
+
+        padding:
+            70px
+            0
+            80px;
+    }
+
+
+    .projects-header {
+
+        width:
+            calc(
+                100% - 30px
+            );
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+
+    .projects-eyebrow {
+
+        font-size:
+            12px;
+    }
+
+
+    .projects-grid {
+
+        width:
+            calc(
+                100% - 30px
+            );
+
+        gap:
+            15px;
+    }
+
+
+    .project-card-title-row h3 {
+
+        font-size:
+            17px;
+    }
+
+
+    .project-modal {
+
+        padding:
+            10px;
+    }
+
+
+    .project-modal-window {
+
+        width:
+            96vw;
+
+        max-height:
+            94vh;
+
+        padding:
+            18px
+            16px
+            24px;
+
+        border-width:
+            2px;
+    }
+
+
+    .project-modal-title-row h2 {
+
+        font-size:
+            30px;
+    }
+
+
+    .project-modal-image-wrap {
+
+        height:
+            230px;
+
+        margin-top:
+            18px;
+    }
+
+
+    .project-modal-content {
+
+        padding:
+            0
+            3px;
+    }
+
+
+    .project-modal-section p {
+
+        font-size:
+            12px;
+    }
+
+
+    .project-modal-features li {
+
+        font-size:
+            12px;
+    }
+
+
+    .project-modal-actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    .project-modal-button {
+
+        width:
+            100%;
+
+        box-sizing:
+            border-box;
+    }
+
+}
+/* =========================================================
+   PROJECT IMAGE — HOVER VIEW DETAILS HINT
+========================================================= */
+
+
+/* Make the image area ready for the overlay */
+
+.project-image-wrap {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   DARK HOVER OVERLAY
+========================================================= */
+
+.project-image-wrap::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0
+        );
+
+    pointer-events: none;
+
+    transition:
+        background .35s ease;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   VIEW DETAILS TEXT
+========================================================= */
+
+.project-image-wrap::before {
+
+    content: "↗  VIEW DETAILS";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    z-index: 3;
+
+    transform:
+        translate(
+            -50%,
+            -42%
+        );
+
+    padding:
+        9px
+        13px;
+
+    border:
+        1px
+        solid
+        rgba(
+            255,
+            255,
+            255,
+            .75
+        );
+
+    border-radius:
+        4px;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            .18
+        );
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .08em;
+
+    white-space:
+        nowrap;
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+    transition:
+        opacity .3s ease,
+        transform .35s ease,
+        background .3s ease;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.project-card:hover
+.project-image-wrap::after {
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            .35
+        );
+
+}
+
+
+.project-card:hover
+.project-image-wrap::before {
+
+    opacity:
+        1;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            .35
+        );
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .project-image-wrap::before {
+
+        font-size:
+            9px;
+
+        padding:
+            8px
+            11px;
+    }
+
+}

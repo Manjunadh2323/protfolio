@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>J. Manjunath | Full Stack Developer</title>
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/favicon.svg"
+    >
+
+
+    <!-- =====================================================
+         EXISTING CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/quote.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/resume1.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- =====================================================
+         PRELOADER CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/loader.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PORTFOLIO PRELOADER
+    ====================================================== -->
+
+    <div
+        id="portfolio-loader"
+        class="portfolio-loader"
+        aria-label="Loading portfolio"
+        role="status"
+    >
+
+        <div class="loader-content">
+
+
+            <!-- =============================================
+                 PROGRESS
+            ============================================== -->
+
+            <div class="loader-progress-wrap">
+
+                <div class="loader-progress">
+
+                    <div
+                        class="loader-progress-fill"
+                    ></div>
+
+                </div>
+
+
+                <span
+                    class="loader-percentage"
+                    aria-live="polite"
+                >
+                    0%
+                </span>
+
+            </div>
+
+
+            <!-- =============================================
+                 MESSAGE
+            ============================================== -->
+
+            <div class="loader-message">
+
+                GOOD THINGS TAKE TIME
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         EXISTING NAVBAR
+         DO NOT CHANGE
+    ====================================================== -->
+
+    <div id="navbar"></div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <div class="scene-transition">
+
+
+            <section
+                class="hero"
+                id="hero"
+            >
+
+                <div
+                    class="hero-bg"
+                    aria-hidden="true"
+                ></div>
+
+
+                <div
+                    class="hero-overlay"
+                    aria-hidden="true"
+                ></div>
+
+
+                <div class="hero-content">
+
+
+                    <div class="hero-panel">
+
+
+                        <div
+                            class="hero-panel-grain"
+                            aria-hidden="true"
+                        ></div>
+
+
+
+                        <!-- RED DECORATION -->
+
+                        <div
+                            class="hero-spark hero-spark-left"
+                            aria-hidden="true"
+                        >
+
+                            <span></span>
+
+                        </div>
+
+
+
+                        <!-- LEFT MESSAGE -->
+
+                        <div class="hero-note hero-note-left">
+
+                            <span>TURNING</span>
+
+                            <span>IDEAS INTO</span>
+
+                            <span>REAL PRODUCTS</span>
+
+                            <i></i>
+
+                        </div>
+
+
+
+                        <!-- RIGHT MESSAGE -->
+
+                        <div class="hero-note hero-note-right">
+
+                            <span>CODE</span>
+
+                            <span>DESIGN</span>
+
+                            <span>BUILD</span>
+
+                            <span>REPEAT</span>
+
+                        </div>
+
+
+
+                        <!-- MAIN TITLE -->
+
+                        <div class="hero-title-wrap">
+
+
+                            <h1 class="hero-title">
+
+
+                                <span class="hero-title-line">
+                                    PYTHON
+                                </span>
+
+
+                                <span class="hero-title-line">
+                                    FULL STACK
+                                </span>
+
+
+                                <span class="hero-title-line">
+                                    DEVELOPER
+                                </span>
+
+
+                            </h1>
+
+
+                        </div>
+
+
+
+                        <!-- LIGHTNING -->
+
+                        <div
+                            class="hero-lightning hero-lightning-right"
+                            aria-hidden="true"
+                        >
+
+                            <span></span>
+
+                        </div>
+
+
+
+                        <!-- SCROLL -->
+
+                        <div class="hero-scroll">
+
+                            <span>
+                                SCROLL DOWN
+                            </span>
+
+                            <b>
+                                ↓
+                            </b>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUOTE
+            ================================================== -->
+
+            <div id="quote-section"></div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             EXISTING SECTIONS
+        ================================================== -->
+
+        <div id="about-section"></div>
+
+        <div id="experience-section"></div>
+
+        <div id="resume-section"></div>
+
+        <div id="projects-section"></div>
+
+        <div id="resume1-section"></div>
+
+        <div id="contact-section"></div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         GSAP
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+    ></script>
+    
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+
+
+
+    <!-- =====================================================
+         EXISTING JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/main.js"></script>
+
+    <script src="js/hero.js"></script>
+
+    <script src="js/animations.js"></script>
+
+    <script src="js/scene.js"></script>
+
+    <script src="js/quote.js"></script>
+
+    <script src="js/about.js"></script>
+
+    <script src="js/experience.js"></script>
+
+    <script src="js/projects.js"></script>
+
+    <script src="js/contact.js"></script>
+
+
+
+    <!-- =====================================================
+         PRELOADER JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/loader.js"></script>
+
+</body>
+
+</html>

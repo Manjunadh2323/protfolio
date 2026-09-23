@@ -1,0 +1,321 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 90px;
+
+    padding: 0 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 9999;
+
+    mix-blend-mode: difference;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   JM LOGO
+========================= */
+
+.logo {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.65);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.logo span {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.08em;
+
+    line-height: 1;
+}
+
+
+.logo:hover {
+
+    background: #ffffff;
+
+    color: #000000;
+
+    transform: rotate(3deg);
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    min-width: 0;
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.nav-links a:hover {
+
+    opacity: 0.6;
+}
+
+
+/* =========================
+   UNDERLINE
+========================= */
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #ffffff;
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.nav-links a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================
+   FULL SCREEN MENU
+========================= */
+
+.mobile-menu {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background:
+        rgba(5, 7, 15, 0.97);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-20px);
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.mobile-menu.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.menu-close {
+
+    position: absolute;
+
+    top: 28px;
+
+    right: 50px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.7);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.menu-close span {
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 1px;
+
+    background: #ffffff;
+}
+
+
+.menu-close span:first-child {
+
+    transform:
+        rotate(45deg);
+}
+
+
+.menu-close span:last-child {
+
+    transform:
+        rotate(-45deg);
+}
+
+
+/* =========================
+   MENU LINKS
+========================= */
+
+.mobile-menu-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+
+.mobile-menu-links a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size:
+        clamp(
+            2rem,
+            5vw,
+            4rem
+        );
+
+    font-weight: 400;
+
+    letter-spacing: 0.03em;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.mobile-menu-links a:hover {
+
+    opacity: 0.5;
+
+    transform:
+        translateX(8px);
+}

@@ -1,0 +1,243 @@
+/* =========================================================
+   J. MANJUNATH — PORTFOLIO PRELOADER
+   Pure Black & White
+========================================================= */
+
+#portfolio-loader {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    background: #000;
+    color: #fff;
+
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: all;
+
+    transition:
+        opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1),
+        visibility 0.9s ease;
+}
+
+
+/* =========================================================
+   LOADER CONTENT
+========================================================= */
+
+.loader-content {
+    width: min(620px, 72vw);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   PROGRESS WRAPPER
+========================================================= */
+
+.loader-progress-wrap {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   PROGRESS TRACK
+========================================================= */
+
+.loader-progress {
+    position: relative;
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #242424;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   WHITE PROGRESS
+========================================================= */
+
+.loader-progress-fill {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 100%;
+
+    background: #fff;
+
+    transform-origin: left center;
+
+    will-change: width;
+}
+
+
+/* =========================================================
+   PERCENTAGE
+========================================================= */
+
+.loader-percentage {
+    width: 36px;
+
+    flex-shrink: 0;
+
+    color: #fff;
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+
+    text-align: right;
+
+    font-variant-numeric: tabular-nums;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.loader-message {
+    margin-top: 28px;
+
+    color: #fff;
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: 0.48em;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   EXIT STATE
+========================================================= */
+
+#portfolio-loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PAGE LOCK
+========================================================= */
+
+html.loader-active,
+body.loader-active {
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .loader-content {
+        width: 76vw;
+    }
+
+    .loader-progress-wrap {
+        gap: 12px;
+    }
+
+    .loader-percentage {
+        width: 30px;
+        font-size: 9px;
+    }
+
+    .loader-message {
+        margin-top: 22px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.34em;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .loader-content {
+        width: 80vw;
+    }
+
+    .loader-message {
+        font-size: 7px;
+        letter-spacing: 0.27em;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #portfolio-loader {
+        transition: opacity 0.3s ease;
+    }
+}
