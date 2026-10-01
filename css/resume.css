@@ -1,0 +1,154 @@
+/* =========================================================
+   RESUME
+   Soft transition between Projects and Experience
+   ========================================================= */
+
+.resume-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #000000;
+
+}
+
+
+/* =========================================================
+   SOFT CINEMATIC LIGHT
+   ========================================================= */
+
+
+
+
+/* =========================================================
+   RESUME LINK
+   ========================================================= */
+
+.resume-link {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 120px;
+
+    padding: 30px 40px;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+
+    text-align: center;
+
+    transition:
+        background-color 400ms ease,
+        color 400ms ease;
+
+}
+
+
+/* =========================================================
+   MINIMAL ACCENT LINE
+   ========================================================= */
+
+.resume-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 32px;
+
+    left: 50%;
+
+    width: 45px;
+
+    height: 1px;
+
+    background: #FFFFFF;
+
+    transform: translateX(-50%);
+
+    transition:
+        width 400ms ease;
+
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.resume-link:hover {
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+}
+
+
+.resume-link:hover::after {
+
+    width: 85px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .resume-section {
+
+        min-height: 100px;
+
+    }
+
+
+    .resume-link {
+
+        min-height: 100px;
+
+        padding: 25px 20px;
+
+        font-size: 12px;
+
+        letter-spacing: 0.12em;
+
+    }
+
+
+    .resume-link::after {
+
+        bottom: 25px;
+
+    }
+
+}

@@ -1,0 +1,181 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HTML
+========================================= */
+
+html {
+    scroll-behavior: auto;
+    background: #050505;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    margin: 0;
+
+    background: #050505;
+
+    color: #f3f4f4;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   TEXT RENDERING
+========================================= */
+
+.hero,
+.quote,
+.about {
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================
+   HERO → QUOTE SCENE
+========================================= */
+
+.scene-transition {
+    position: relative;
+
+    width: 100%;
+
+    /*
+        200vh total scene
+
+        0 → 100vh
+        Hero → Quote transition
+
+        100 → 200vh
+        Quote holds
+
+        After this:
+        About begins
+    */
+
+    height: 200vh;
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   HERO
+   🔒 DO NOT CHANGE HERO DESIGN
+========================================= */
+
+.scene-transition > .hero {
+    position: sticky;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    z-index: 2;
+
+    will-change:
+        transform,
+        opacity,
+        filter;
+}
+
+
+/* =========================================
+   QUOTE
+   STICKY SCENE
+========================================= */
+
+.scene-transition > #quote-section {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    /*
+        Hero occupies the first viewport.
+
+        Quote begins directly underneath it
+        but visually shares the same viewport.
+
+        GSAP moves it from:
+        100vh → 0
+    */
+
+    margin-top: -100vh;
+
+    z-index: 3;
+
+    overflow: hidden;
+
+    will-change:
+        transform;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.scene-transition
+#quote-section
+.quote {
+    position: relative;
+
+    width: 100%;
+
+    height: 100vh;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+#about-section {
+    position: relative;
+
+    width: 100%;
+
+    z-index: 10;
+
+    background: #050505;
+}
