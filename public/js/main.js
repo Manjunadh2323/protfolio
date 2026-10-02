@@ -51,7 +51,7 @@ document.addEventListener(
 
             const response =
                 await fetch(
-                    "html/nav.html"
+                    "/html/nav.html"
                 );
 
 
@@ -110,7 +110,7 @@ document.addEventListener(
 
             const response =
                 await fetch(
-                    "html/quote.html"
+                    "/html/quote.html"
                 );
 
 
@@ -169,7 +169,7 @@ document.addEventListener(
 
             const response =
                 await fetch(
-                    "html/about.html"
+                    "/html/about.html"
                 );
 
 
@@ -228,7 +228,7 @@ document.addEventListener(
 
             const response =
                 await fetch(
-                    "html/experience.html"
+                    "/html/experience.html"
                 );
 
 
@@ -359,7 +359,7 @@ try {
 
             const response =
                 await fetch(
-                    "html/resume1.html"
+                    "/html/resume1.html"
                 );
 
 
@@ -418,7 +418,7 @@ try {
 
             const response =
                 await fetch(
-                    "html/resume.html"
+                    "/html/resume.html"
                 );
 
 
@@ -477,7 +477,7 @@ try {
 
             const response =
                 await fetch(
-                    "html/contact.html"
+                    "/html/contact.html"
                 );
 
 

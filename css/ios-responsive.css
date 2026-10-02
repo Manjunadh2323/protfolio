@@ -1,7 +1,7 @@
 /* =========================================================
    CROSS-DEVICE / iOS SAFETY LAYER
-   Keeps the existing visual design while hardening layout
-   for Safari on iPhone/iPad and small screens.
+   Generic browser hardening only. Section-specific layout is
+   handled by each component stylesheet and device-fixes.css.
 ========================================================= */
 
 html {
@@ -43,31 +43,6 @@ input, textarea, select {
     font-size: 16px;
 }
 
-/* Use the real visible viewport on Safari without changing desktop. */
-.hero,
-.quote,
-.portfolio-loader,
-.contact {
-    min-height: 100vh;
-    min-height: 100svh;
-    min-height: calc(var(--app-height, 1vh) * 100);
-}
-
-/* Prevent fixed-width content from causing horizontal scrolling. */
-.hero-panel,
-.hero-content,
-.quote-inner,
-.about-inner,
-.experience-inner,
-.projects-inner,
-.contact-inner,
-.resume-inner,
-.resume1-inner {
-    max-width: 100%;
-    min-width: 0;
-}
-
-/* Safari does not need a desktop mouse cursor/parallax interaction. */
 @media (hover: none), (pointer: coarse) {
     .hero,
     .hero-content,
@@ -92,79 +67,8 @@ input, textarea, select {
     }
 }
 
-@media (max-width: 900px) {
-    .hero-content,
-    .quote-inner,
-    .about-inner,
-    .experience-inner,
-    .projects-inner,
-    .contact-inner,
-    .resume-inner,
-    .resume1-inner {
-        width: min(100% - 32px, 760px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero,
-    .quote,
-    .portfolio-loader,
-    .contact {
-        min-height: 100svh;
-        min-height: calc(var(--app-height, 1vh) * 100);
-        height: auto;
-    }
-
-    .hero-content,
-    .quote-inner,
-    .about-inner,
-    .experience-inner,
-    .projects-inner,
-    .contact-inner,
-    .resume-inner,
-    .resume1-inner {
-        width: calc(100% - 24px);
-        max-width: none;
-    }
-
-    .hero-title,
-    .hero-title-line,
-    .quote-line,
-    .contact-title {
-        overflow-wrap: anywhere;
-        word-break: normal;
-    }
-
-    .contact-field input,
-    .contact-field textarea {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 380px) {
-    .hero-content,
-    .quote-inner,
-    .about-inner,
-    .experience-inner,
-    .projects-inner,
-    .contact-inner,
-    .resume-inner,
-    .resume1-inner {
-        width: calc(100% - 18px);
-    }
-}
-
 @supports (-webkit-touch-callout: none) {
     body {
-        min-height: -webkit-fill-available;
-    }
-
-    .hero,
-    .quote,
-    .portfolio-loader,
-    .contact {
         min-height: -webkit-fill-available;
     }
 }

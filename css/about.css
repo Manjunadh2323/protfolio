@@ -378,35 +378,37 @@
 ========================================= */
 
 .about-more {
-    display: inline-flex;
+    display: flex;
 
     align-items: center;
+    justify-content: center;
 
-    justify-content: flex-start;
+    width: max-content;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 28px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
 
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            .76
-        );
+    color: #fff;
 
     text-decoration: none;
 
     text-transform: uppercase;
 
-    font-size: 9px;
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size: 10px;
 
     line-height: 1;
 
     font-weight: 500;
 
-    letter-spacing: .23em;
+    letter-spacing: .16em;
 
     opacity: 0;
 
@@ -415,30 +417,27 @@
         opacity;
 
     transition:
-        color .35s ease,
-        gap .45s
-        cubic-bezier(
-            .22,
-            1,
-            .36,
-            1
-        );
-}
-
-
-.about-more-dot {
-    font-size: 17px;
-
-    line-height: 0;
-
-    letter-spacing: 0;
+        opacity .3s ease,
+        transform .3s ease;
 }
 
 
 .about-more:hover {
+    opacity: .65;
     color: #fff;
-
     gap: 16px;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.about-more-dot {
+    font-size: 14px;
+
+    line-height: 1;
+
+    letter-spacing: 0;
 }
 
 
@@ -882,53 +881,67 @@
         opacity: 1 !important;
     }
 }
+
+
 /* =========================================================
-   KNOW MORE — CENTERED POSITION
+   SHORT LANDSCAPE SCREENS
+   Keep the composition readable instead of clipping a tall
+   sticky stage inside a short landscape viewport.
 ========================================================= */
 
-.about-more {
-    display: flex;
+@media (max-width: 900px)
+    and (orientation: landscape)
+    and (max-height: 600px) {
 
-    align-items: center;
-    justify-content: center;
+    .about {
+        height: auto;
+        min-height: 100svh;
+    }
 
-    width: max-content;
+    .about-stage {
+        position: relative;
+        height: auto;
+        min-height: 100svh;
+        overflow: visible;
+    }
 
-    margin-top: 32px;
-    margin-left: auto;
-    margin-right: auto;
+    .about-composition {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: min(92vw, 820px);
+        margin: 84px auto 64px;
+        display: grid;
+        grid-template-columns: minmax(170px, 34vw) minmax(0, 1fr);
+        column-gap: 26px;
+        align-items: center;
+        transform: none;
+    }
 
-    gap: 10px;
+    .about-visual {
+        width: 100%;
+        max-width: 300px;
+    }
 
-    text-decoration: none;
+    .about-info {
+        text-align: left;
+    }
 
-    color: #fff;
+    .about-intro-main {
+        align-items: flex-start;
+        font-size: clamp(30px, 6vw, 54px);
+        text-align: left;
+    }
 
-    font-family:
-        "Courier New",
-        Courier,
-        monospace;
+    .about-intro-description {
+        max-width: 100%;
+        margin: 0;
+        text-align: left;
+        font-size: 11px;
+    }
 
-    font-size: 10px;
-
-    letter-spacing: 0.16em;
-
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-.about-more:hover {
-    opacity: 0.65;
-
-    transform:
-        translateY(-2px);
-}
-
-
-.about-more-dot {
-    font-size: 14px;
-
-    line-height: 1;
+    .about-more {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
 }

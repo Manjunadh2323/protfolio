@@ -258,7 +258,7 @@
 
     appearance: none;
 
-    border: 1px solid transparent;
+    border: 1px solid #111111;
 
     border-radius: 9px;
 
@@ -266,9 +266,9 @@
         9px
         18px;
 
-    background: #111111;
+    background: #ffffff;
 
-    color: #ffffff;
+    color: #111111;
 
     font-family:
         "Courier New",
@@ -293,10 +293,16 @@
 
 .experience-tab:hover {
 
-    transform:
-        translateY(-1px);
+    background: #f7f7f7;
 
-    color: #ffffff;
+    border-color: #000000;
+
+    transform: translateY(-2px);
+
+    color: #000000;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -308,11 +314,29 @@
 
     color: #ffffff;
 
+    transform: translateY(-2px);
+
     box-shadow:
-        0
-        2px
-        0
-        rgba(0, 0, 0, .20);
+        0 7px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+.experience-tab.active:hover {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+.experience-tab:active {
+    transform: translateY(0);
+}
+
+.experience-tab:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
 }
 
 
@@ -739,7 +763,7 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
 
     .experience-section {
 
@@ -864,13 +888,6 @@
     }
 
 
-    .skills-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-
-
     .skill-category {
 
         min-height: auto;
@@ -978,127 +995,14 @@
     }
 
 }
-/* =========================================================
-   PREMIUM TAB BUTTON OVERRIDE
-   ADD THIS AT THE VERY END OF experience.css
-========================================================= */
-
-
-/* ---------------------------------------------------------
-   DEFAULT STATE
-   WHITE BACKGROUND + BLACK TEXT
---------------------------------------------------------- */
-
-.experience-tab {
-    background: #ffffff;
-    color: #111111;
-
-    border: 1px solid #111111;
-
-    box-shadow: none;
-
-    transform: translateY(0);
-}
-
-
-/* ---------------------------------------------------------
-   DEFAULT HOVER
---------------------------------------------------------- */
-
-.experience-tab:hover {
-    background: #f7f7f7;
-    color: #000000;
-
-    border-color: #000000;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-
-/* ---------------------------------------------------------
-   ACTIVE / CLICKED
-   BLACK BACKGROUND + WHITE TEXT
---------------------------------------------------------- */
-
-.experience-tab.active {
-    background: #000000;
-    color: #ffffff;
-
-    border-color: #000000;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 7px 18px rgba(0, 0, 0, 0.18);
-}
-
-
-/* ---------------------------------------------------------
-   ACTIVE HOVER
---------------------------------------------------------- */
-
-.experience-tab.active:hover {
-    background: #111111;
-    color: #ffffff;
-
-    border-color: #111111;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.20);
-}
-
-
-/* ---------------------------------------------------------
-   CLICK FEEDBACK
---------------------------------------------------------- */
-
-.experience-tab:active {
-    transform: translateY(0);
-}
-
-
-/* ---------------------------------------------------------
-   KEYBOARD FOCUS
---------------------------------------------------------- */
-
-.experience-tab:focus-visible {
-    outline: 2px solid #000000;
-    outline-offset: 3px;
-}
 
 
 /* =========================================================
-   PREMIUM TAB SEPARATOR
-   KEEPING YOUR EXISTING DOTTED STYLE
+   SKILLS — SINGLE COLUMN ON SMALLER PHONES
 ========================================================= */
 
-.experience-tabs {
-    border-bottom:
-        2px
-        dotted
-        #111111;
-}
-
-
-/* =========================================================
-   MOBILE OVERRIDE
-========================================================= */
-
-@media (max-width: 760px) {
-
-    .experience-tab {
-        background: #ffffff;
-        color: #111111;
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
-
-    .experience-tab.active {
-        background: #000000;
-        color: #ffffff;
-    }
-
 }

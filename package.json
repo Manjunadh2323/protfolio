@@ -1,8 +1,7 @@
 {
     "name": "portfolio",
     "version": "1.0.0",
-    "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-    "main": "index.js",
+    "description": "J. Manjunath personal portfolio \u2014 responsive static website",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "vite",

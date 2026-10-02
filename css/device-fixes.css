@@ -1,0 +1,317 @@
+/* =========================================================
+   DEVICE FIXES — FINAL RESPONSIVE LAYER
+   Loaded after the existing section styles so mobile/tablet
+   behavior is deterministic without changing desktop layout.
+========================================================= */
+
+/* =========================================================
+   TABLET + MOBILE SCENE GEOMETRY
+========================================================= */
+@media (max-width: 900px) {
+    .scene-transition {
+        height: 200svh;
+    }
+
+    .scene-transition > .hero {
+        height: 100svh;
+    }
+
+    .scene-transition > #quote-section {
+        height: 100svh;
+        margin-top: -100svh;
+    }
+
+    .hero {
+        min-height: 0 !important;
+        height: 100svh !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-content {
+        width: 88vw !important;
+        max-width: 760px !important;
+        height: 72svh !important;
+        min-height: 0 !important;
+        margin: 0 auto !important;
+        align-self: center !important;
+    }
+
+    .hero-panel {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 24px !important;
+    }
+
+    /* Keep each editorial title word on its own existing line,
+       but make the full three-line block fit inside the panel. */
+    .hero-title-wrap {
+        top: 20% !important;
+        left: 2.5% !important;
+        right: 2.5% !important;
+    }
+
+    .hero-title {
+        width: 100% !important;
+        font-size: clamp(3rem, 9vw, 5.8rem) !important;
+        line-height: .82 !important;
+        letter-spacing: -.07em !important;
+    }
+
+    .hero-title-line {
+        width: 100% !important;
+        max-width: 100% !important;
+        white-space: nowrap !important;
+        text-align: center !important;
+    }
+
+    .hero-note-right {
+        top: 7% !important;
+        right: 6% !important;
+        max-width: 84px !important;
+        font-size: 7px !important;
+        line-height: 1.5 !important;
+        letter-spacing: .13em !important;
+        z-index: 20 !important;
+    }
+
+    .hero-note-left {
+        left: 6% !important;
+        top: 61% !important;
+        font-size: 7px !important;
+        line-height: 1.5 !important;
+        letter-spacing: .13em !important;
+    }
+
+    .hero-spark-left {
+        top: 11% !important;
+        left: 6% !important;
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .hero-lightning-right {
+        top: 61% !important;
+        right: 5% !important;
+        width: 34px !important;
+        height: 54px !important;
+    }
+
+    .hero-scroll {
+        bottom: 5% !important;
+        font-size: 7px !important;
+        letter-spacing: .15em !important;
+    }
+
+    /* Navbar remains horizontal on every screen. */
+    .navbar {
+        mix-blend-mode: difference !important;
+    }
+
+    /* Quote text is centered in the actual visible viewport. */
+    #quote-section .quote {
+        width: 100% !important;
+        height: 100svh !important;
+        min-height: 0 !important;
+    }
+
+    #quote-section .quote-scene {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100svh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #quote-section .quote-center {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        margin: 0 !important;
+        transform: translate(-50%, -50%) !important;
+        width: min(82vw, 520px) !important;
+        z-index: 10 !important;
+    }
+
+    #quote-section .quote-line-5 {
+        height: auto !important;
+    }
+}
+
+/* =========================================================
+   PHONE
+========================================================= */
+@media (max-width: 600px) {
+    .hero-content {
+        width: 88vw !important;
+        height: 72svh !important;
+    }
+
+    .hero-panel {
+        border-radius: 22px !important;
+    }
+
+    .hero-title-wrap {
+        top: 20% !important;
+        left: 2% !important;
+        right: 2% !important;
+    }
+
+    .hero-title {
+        font-size: clamp(2.6rem, 10vw, 4.15rem) !important;
+        line-height: .84 !important;
+        letter-spacing: -.072em !important;
+    }
+
+    .hero-note-right {
+        top: 7% !important;
+        right: 5% !important;
+        max-width: 76px !important;
+        font-size: 6.5px !important;
+    }
+
+    .hero-note-left {
+        left: 7% !important;
+        top: 61% !important;
+        font-size: 6.5px !important;
+    }
+
+    .hero-spark-left {
+        width: 32px !important;
+        height: 32px !important;
+        top: 11% !important;
+        left: 6% !important;
+    }
+
+    .hero-lightning-right {
+        top: 63% !important;
+        right: 5% !important;
+        width: 31px !important;
+        height: 49px !important;
+    }
+
+    .hero-scroll {
+        bottom: 4.5% !important;
+        font-size: 6.5px !important;
+    }
+
+    #quote-section .quote-center {
+        width: min(82vw, 420px) !important;
+    }
+
+    #quote-section .quote-line-5 {
+        margin-left: 18% !important;
+        width: 82% !important;
+        height: auto !important;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+@media (max-width: 380px) {
+    .hero-content {
+        width: 89vw !important;
+        height: 70svh !important;
+    }
+
+    .hero-panel {
+        border-radius: 20px !important;
+    }
+
+    .hero-title {
+        font-size: clamp(2.45rem, 10vw, 3.7rem) !important;
+    }
+
+    .hero-note-right {
+        top: 7% !important;
+        right: 4.5% !important;
+        font-size: 6px !important;
+    }
+
+    .hero-note-left {
+        top: 61% !important;
+        font-size: 6px !important;
+    }
+
+    #quote-section .quote-center {
+        width: 84vw !important;
+    }
+}
+
+/* =========================================================
+   SHORT LANDSCAPE
+========================================================= */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 600px) {
+    .hero {
+        height: 100svh !important;
+    }
+
+    .hero-content {
+        width: 94vw !important;
+        height: 86svh !important;
+    }
+
+    .hero-panel {
+        border-radius: 20px !important;
+    }
+
+    .hero-title-wrap {
+        top: 18% !important;
+    }
+
+    .hero-title {
+        font-size: clamp(2.6rem, 8vw, 4.5rem) !important;
+        line-height: .8 !important;
+    }
+
+    .hero-note-right {
+        top: 6% !important;
+        right: 5% !important;
+        font-size: 6px !important;
+    }
+
+    .hero-note-left {
+        top: 61% !important;
+        font-size: 6px !important;
+    }
+
+    .hero-spark-left {
+        top: 7% !important;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .hero-lightning-right {
+        top: 63% !important;
+        width: 28px !important;
+        height: 44px !important;
+    }
+
+    #quote-section .quote {
+        height: 100svh !important;
+    }
+
+    #quote-section .quote-center {
+        width: min(78vw, 560px) !important;
+    }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+@media (hover: none), (pointer: coarse) {
+    .nav-links a:hover::after {
+        width: 0;
+    }
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg {
+        transform: none !important;
+    }
+}

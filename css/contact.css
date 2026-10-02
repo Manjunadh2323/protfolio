@@ -1008,96 +1008,30 @@
     }
 }
 /* =========================================================
-   CONTACT ICONS — FIX SVG VISIBILITY
+   CONTACT ICONS — FINAL CONSOLIDATED FIX
 ========================================================= */
 
 .contact-detail-icon {
-
     width: 44px;
     height: 44px;
-
     flex: 0 0 44px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     background: #000000;
-
     border-radius: 9px;
-
 }
 
-
 .contact-detail-icon svg {
-
     width: 22px;
-
     height: 22px;
-
     display: block;
-
     overflow: visible;
-
 }
 
-
-/* =========================================================
-   EMAIL + INSTAGRAM
-========================================================= */
-
-.contact-detail:nth-of-type(1)
-.contact-detail-icon svg,
-
-.contact-detail:nth-of-type(2)
-.contact-detail-icon svg {
-
-    fill: none;
-
-    stroke: #ffffff;
-
-    stroke-width: 1.8;
-
-    stroke-linecap: round;
-
-    stroke-linejoin: round;
-
-}
-
-
-/* =========================================================
-   GITHUB
-========================================================= */
-
-.contact-detail:nth-of-type(3)
-.contact-detail-icon svg {
-
-    fill: #ffffff;
-
-    stroke: none;
-
-}
-
-
-/* =========================================================
-   LINKEDIN
-========================================================= */
-
-.contact-detail:nth-of-type(4)
-.contact-detail-icon svg {
-
-    fill: #ffffff;
-
-    stroke: none;
-
-}/* =========================================================
-   FINAL CONTACT ICON FIX
-========================================================= */
-
-/* Email + Instagram stay outlined */
-.contact-detail:nth-of-type(1) .contact-detail-icon svg {
+/* Email + Instagram — outlined icons */
+.contact-detail:nth-of-type(1) .contact-detail-icon svg,
+.contact-detail:nth-of-type(2) .contact-detail-icon svg {
     fill: none;
     stroke: #ffffff;
     stroke-width: 1.8;
@@ -1105,76 +1039,117 @@
     stroke-linejoin: round;
 }
 
-
-/* GitHub — completely white */
-.contact-detail:nth-of-type(3) .contact-detail-icon svg path {
-    fill: #ffffff !important;
-    stroke: none !important;
-}
-
-
-/* LinkedIn — completely white */
-.contact-detail:nth-of-type(4) .contact-detail-icon svg path {
-    fill: #ffffff !important;
-    stroke: none !important;
-}
-
-
-/* Make sure all LinkedIn paths are visible */
+/* GitHub + LinkedIn — solid white icons */
+.contact-detail:nth-of-type(3) .contact-detail-icon svg,
 .contact-detail:nth-of-type(4) .contact-detail-icon svg {
     fill: #ffffff;
     stroke: none;
 }
+
+.contact-detail:nth-of-type(3) .contact-detail-icon svg path,
+.contact-detail:nth-of-type(4) .contact-detail-icon svg path {
+    fill: #ffffff;
+    stroke: none;
+}
+
+/* Email envelope paths remain outlined. */
+.contact-detail:nth-of-type(1) .contact-detail-icon svg rect,
+.contact-detail:nth-of-type(1) .contact-detail-icon svg path {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 /* =========================================================
-   EMAIL ICON — FINAL FIX
+   SHORT LANDSCAPE SCREENS
 ========================================================= */
 
-.contact-detail:nth-of-type(1)
-.contact-detail-icon
-svg {
+@media (max-width: 900px)
+    and (orientation: landscape)
+    and (max-height: 600px) {
 
-    width: 22px !important;
-    height: 22px !important;
+    .contact-inner {
+        padding-top: 54px;
+    }
 
-    fill: none !important;
+    .contact-grid {
+        gap: 18px;
+    }
 
-    stroke: #ffffff !important;
+    .contact-card-heading {
+        margin-bottom: 12px;
+    }
 
-    stroke-width: 1.8 !important;
+    .contact-detail {
+        min-height: 60px;
+        margin-bottom: 9px;
+    }
 
-    stroke-linecap: round !important;
-
-    stroke-linejoin: round !important;
-
+    .contact-form-card {
+        padding: 18px;
+    }
 }
 
 
-/* Email outer box */
-.contact-detail:nth-of-type(1)
-.contact-detail-icon
-svg rect {
+/* =========================================================
+   MOBILE — FOOTER STAYS ON ONE ROW
+   Copyright remains left; social links remain right.
+========================================================= */
 
-    fill: none !important;
+@media (max-width: 767px) {
 
-    stroke: #ffffff !important;
+    .contact-footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        white-space: nowrap;
+    }
 
-    stroke-width: 1.8 !important;
+    .contact-footer > span {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-size: clamp(7px, 2.2vw, 9px);
+        letter-spacing: .08em;
+    }
+
+    .contact-footer-socials {
+        flex: 0 0 auto;
+        flex-wrap: nowrap;
+        gap: clamp(9px, 2.8vw, 17px);
+    }
+
+    .contact-footer-socials a {
+        white-space: nowrap;
+        font-size: inherit;
+    }
 }
 
 
-/* Email envelope flap */
-.contact-detail:nth-of-type(1)
-.contact-detail-icon
-svg path {
+/* =========================================================
+   VERY SMALL PHONES — FOOTER FIT
+   Keeps copyright left and links right without wrapping.
+========================================================= */
 
-    fill: none !important;
+@media (max-width: 430px) {
 
-    stroke: #ffffff !important;
+    .contact-footer {
+        gap: 4px;
+    }
 
-    stroke-width: 1.8 !important;
+    .contact-footer > span {
+        font-size: clamp(6px, 1.8vw, 8px);
+        letter-spacing: .045em;
+    }
 
-    stroke-linecap: round !important;
+    .contact-footer-socials {
+        gap: clamp(5px, 1.7vw, 10px);
+    }
 
-    stroke-linejoin: round !important;
-
+    .contact-footer-socials a {
+        font-size: inherit;
+        letter-spacing: .045em;
+    }
 }

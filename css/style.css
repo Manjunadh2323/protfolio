@@ -166,6 +166,32 @@ main {
 }
 
 
+/* =========================================================
+   MOBILE SCENE — USE SMALL VIEWPORT CONSISTENTLY
+   Desktop and large-tablet scene sizing remains unchanged.
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .scene-transition {
+        height: 200vh;
+        height: 200svh;
+    }
+
+    .scene-transition > .hero {
+        height: 100vh;
+        height: 100svh;
+    }
+
+    .scene-transition > #quote-section {
+        height: 100vh;
+        height: 100svh;
+        margin-top: -100vh;
+        margin-top: -100svh;
+    }
+}
+
+
 /* =========================================
    ABOUT
 ========================================= */

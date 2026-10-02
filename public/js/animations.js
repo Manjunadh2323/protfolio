@@ -18,7 +18,7 @@
    - Hero        → hero.js / scene.js
    - Quote       → quote.js / scene.js
    - About       → about.js
-   - Skills      → skills.js
+   - Skills      → experience.js (skills tab)
    - Projects    → projects.js
    - Experience  → experience.js
    - Contact     → contact.js

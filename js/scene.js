@@ -3,6 +3,48 @@
    MASTER SCENE
 
    HERO TRANSFORMATION PRESERVED
+   DESKTOP / LAPTOP BEHAVIOR PRESERVED
+========================================= */
+
+
+/* =========================================
+   MOBILE / TABLET VIEWPORT HELPER
+========================================= */
+
+function isSmallViewport() {
+
+    return window.matchMedia(
+        "(max-width: 900px)"
+    ).matches;
+
+}
+
+
+function getQuoteStartPosition() {
+
+    /*
+       Desktop / laptop:
+       Keep the original 100vh behavior.
+
+       Tablet / mobile:
+       Use 100svh so the quote starts at
+       exactly the same viewport height used
+       by quote.css and scene-transition.
+    */
+
+    if (isSmallViewport()) {
+
+        return "100svh";
+
+    }
+
+    return "100vh";
+
+}
+
+
+/* =========================================
+   HERO → QUOTE SCENE
 ========================================= */
 
 document.addEventListener(
@@ -160,13 +202,21 @@ document.addEventListener(
 
         /* =====================================
            QUOTE INITIAL POSITION
-           🔒 PRESERVED
+
+           DESKTOP:
+           100vh  🔒 PRESERVED
+
+           MOBILE / TABLET:
+           100svh  ✅ FIXED
+
+           This matches the responsive
+           scene-transition and quote CSS.
         ===================================== */
 
         gsap.set(
             quoteSection,
             {
-                y: "100vh",
+                y: getQuoteStartPosition(),
                 opacity: 1
             }
         );
@@ -287,6 +337,12 @@ document.addEventListener(
         /* =====================================
            QUOTE RISE
            🔒 PRESERVED
+
+           The quote still animates from its
+           initial position to y: 0.
+
+           Only the mobile starting unit
+           changed from 100vh → 100svh.
         ===================================== */
 
         timeline.to(
@@ -350,9 +406,9 @@ document.addEventListener(
 
         /* =====================================
            QUOTE COLOR
-           
+
            DARK → BLUE → WHITE
-        ===================================== */
+===================================== */
 
         timeline.to(
             quote,
@@ -531,14 +587,69 @@ document.addEventListener(
         ===================================== */
 
         const refreshScene = () => {
-            requestAnimationFrame(() => ScrollTrigger.refresh());
+
+            requestAnimationFrame(
+                () => {
+
+                    /*
+                       On small screens, keep the
+                       quote start aligned with
+                       the current small viewport.
+
+                       Desktop is untouched.
+                    */
+
+                    if (
+                        isSmallViewport() &&
+                        timeline.progress() <= 0.001
+                    ) {
+
+                        gsap.set(
+                            quoteSection,
+                            {
+                                y: getQuoteStartPosition()
+                            }
+                        );
+
+                    }
+
+
+                    ScrollTrigger.refresh();
+
+                }
+            );
+
         };
 
-        window.addEventListener("resize", refreshScene, { passive: true });
-        window.addEventListener("orientationchange", refreshScene, { passive: true });
+
+        window.addEventListener(
+            "resize",
+            refreshScene,
+            {
+                passive: true
+            }
+        );
+
+
+        window.addEventListener(
+            "orientationchange",
+            refreshScene,
+            {
+                passive: true
+            }
+        );
+
 
         if (window.visualViewport) {
-            window.visualViewport.addEventListener("resize", refreshScene, { passive: true });
+
+            window.visualViewport.addEventListener(
+                "resize",
+                refreshScene,
+                {
+                    passive: true
+                }
+            );
+
         }
 
     }
