@@ -2,81 +2,120 @@
 <html lang="en">
 
 <head>
-    
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>About — Manjunath</title>
-
-    <link
-        rel="stylesheet"
-        href="../css/about1.css"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Know More — Manjunath</title>
+    <link rel="stylesheet" href="../css/about1.css">
 </head>
 
 <body>
-
-    <!-- =====================================================
-         QUOTE LOADER
-    ====================================================== -->
-
-    <div
-        class="about-loader"
-        id="aboutLoader"
-    >
-
+    <div class="about-loader" id="aboutLoader">
         <div class="quote-loader">
-
-            
-
-            <span class="quote-text">
-                "GREAT DESIGN IS FELT BEFORE IT'S UNDERSTOOD."
-            </span>
-
-            
-
+            <span class="quote-text">"GREAT DESIGN IS FELT BEFORE IT'S UNDERSTOOD"</span>
         </div>
-
     </div>
 
-
-    <!-- =====================================================
-         WELCOME
-    ====================================================== -->
-
-    <main
-        class="about-page"
-        id="aboutPage"
-    >
-
-        <button
-            class="back-button"
-            id="backButton"
-            type="button"
-            aria-label="Back to portfolio"
-        >
+    <main class="about-page" id="aboutPage">
+        <button class="back-button" id="backButton" type="button" aria-label="Back to portfolio">
             <span class="back-arrow">←</span>
             <span>BACK</span>
         </button>
 
+        <section class="future-content">
+            <h1 class="future-title">Future</h1>
+            <div class="childhood-image-wrapper">
+                <img class="childhood-image" src="../images/childhood.jpeg" alt="Manjunath as a child"
+                    draggable="false">
+                <span class="future-cursor" aria-hidden="true">↖</span>
+            </div>
+            <div class="future-subtitle">Manju, Future Full-Stack Developer.</div>
+        </section>
 
-        <div class="welcome-content">
+        <section class="story-sections" aria-label="My story">
+            <article class="story-card">
+                <h2>My Identity</h2>
+                <h3>I WAS BORN IN CHITTOOR, ANDHRA PRADESH, INDIA.</h3>
+                <p>EVERY JOURNEY HAS AN ORIGIN. MINE WOULD EVENTUALLY FIND ITS EXPRESSION THROUGH CODE — A JOURNEY THAT
+                    SHAPED WHO I AM AND BROUGHT ME TO WHERE I STAND TODAY.</p>
+            </article>
 
-            <h1>
-                WELCOME
-            </h1>
+            <article class="story-card">
+                <h2>My Growth</h2>
+                <h3>A SMALL TOWN, A CURIOUS MIND.</h3>
+                <p>MY CURIOSITY BEGAN WITH PLAYING GAMES ON MY MATERNAL UNCLE'S COMPUTER. SOON, I STARTED WONDERING HOW
+                    GAMES, WEBSITES, AND APPS WORKED.</p>
+            </article>
 
-        </div>
+            <article class="story-card">
+                <h2>My Hobbies</h2>
+                <h3>MY STORY BEGAN WITH CRICKET.</h3>
+                <p>I FOUND JOY IN THE SPIRIT OF TEAMWORK, THE THRILL OF COMPETITION, AND THE UNPREDICTABLE EXCITEMENT OF
+                    EVERY MATCH.</p>
+            </article>
+        </section>
 
+        <!-- KNOW MORE EDITORIAL SECTION: replaces the old timeline only -->
+        <section class="know-more-editorial" id="knowMoreEditorial" aria-label="My approach to development">
+            <div class="editorial-intro">
+                <div class="editorial-copy">
+                    <span class="editorial-eyebrow">WHERE IT ALL BEGAN</span>
+
+                    <p class="editorial-lead">Later, my brother introduced me to web development, and I realized it was
+                        the perfect space where technology meets curiosity and creativity.</p>
+                    <p class="editorial-note">
+                        That discovery sparked my journey into coding, learning, building, and growing as a Full-Stack
+                        Developer.
+                    </p>
+                </div>
+                <figure class="editorial-portrait">
+
+                    <img src="../images/about1.jpeg" alt="Manjunath against a sunset sky" loading="lazy">
+
+
+                </figure>
+            </div>
+
+            <div class="editorial-details">
+                <div class="editorial-heading">
+                    <span class="editorial-eyebrow">MY WAY OF MOVING FORWARD</span>
+                    <h2>I build with<br><span>curiosity and purpose.</span></h2>
+                </div>
+
+
+            </div><!-- End editorial-details -->
+
+            <footer class="editorial-footer">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="../index.html#about-section">ABOUT</a>
+                    <a href="../index.html#projects-section">PROJECTS</a>
+                    <a href="../index.html#resume-section">SKILLS</a>
+                    <a href="../index.html#contact-section">CONTACT</a>
+                </nav>
+
+                <h2 class="footer-name">MANJUNATH</h2>
+
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/manjunath-j-4291b4289/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+
+                    <a href="https://github.com/Manjunadh2323" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+                    <a href="https://wa.me/919966586817" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
+
+                <a class="footer-email" href="tel:+919966586817">
+                    +91 9966586817
+                </a>
+            </footer>
+
+
+
+        </section>
     </main>
 
-
     <script src="../js/about1.js"></script>
-
+    <script src="../js/scroll-effects.js"></script>
 </body>
 
 </html>

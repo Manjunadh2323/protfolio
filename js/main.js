@@ -36,12 +36,10 @@ if (window.visualViewport) {
 document.addEventListener(
     "DOMContentLoaded",
     async () => {
-
-        // Start at the hero only when no section hash was requested.
-        if (!window.location.hash) {
-            window.scrollTo(0, 0);
-        }
-
+// Start at the hero only when no section hash is requested.
+if (!window.location.hash) {
+    window.scrollTo(0, 0);
+}
 
         /* =====================================
            LOAD NAVBAR
@@ -341,6 +339,33 @@ try {
             "projectsSectionLoaded"
         )
     );
+    
+        // Navigate to a requested section after dynamic content loads.
+        function scrollToRequestedSection() {
+            const hash = window.location.hash;
+
+            if (!hash) return;
+
+            const target = document.getElementById(
+                decodeURIComponent(hash.slice(1))
+            );
+
+            if (!target) {
+                console.warn("Navigation target not found:", hash);
+                return;
+            }
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
+        // Run after the sections have been inserted into the page.
+        requestAnimationFrame(() => {
+            requestAnimationFrame(scrollToRequestedSection);
+        });
+
 
 
 } catch (error) {
@@ -541,62 +566,6 @@ try {
             )
         );
 
-
-        /* =====================================
-           FOOTER HASH NAVIGATION
-           Run after dynamically loaded sections
-           have been inserted into the page.
-        ===================================== */
-
-        function scrollToRequestedSection() {
-            const rawHash = window.location.hash;
-            if (!rawHash) return;
-
-            let requestedId;
-
-            try {
-                requestedId = decodeURIComponent(rawHash.slice(1));
-            } catch (error) {
-                requestedId = rawHash.slice(1);
-            }
-
-            // Skills lives inside the Experience section.
-            const isSkillsLink = requestedId === "skills-section";
-            const actualTargetId = isSkillsLink
-                ? "experience-section"
-                : requestedId;
-
-            const target = document.getElementById(actualTargetId);
-
-            if (!target) {
-                console.warn("Navigation target not found:", rawHash);
-                return;
-            }
-
-            if (isSkillsLink) {
-                const skillsTab = target.querySelector(
-                    '.experience-tab[data-tab="skills"]'
-                );
-
-                if (skillsTab) {
-                    skillsTab.click();
-                }
-            }
-
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    target.scrollIntoView({
-                        behavior: window.matchMedia(
-                            "(prefers-reduced-motion: reduce)"
-                        ).matches ? "auto" : "smooth",
-                        block: "start"
-                    });
-                });
-            });
-        }
-
-        scrollToRequestedSection();
-        window.addEventListener("hashchange", scrollToRequestedSection);
 
     }
 );
